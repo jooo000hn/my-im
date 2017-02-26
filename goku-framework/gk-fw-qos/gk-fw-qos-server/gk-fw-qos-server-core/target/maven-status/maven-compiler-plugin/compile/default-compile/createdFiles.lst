@@ -1,0 +1,10 @@
+com\gkframework\qos\server\core\entity\DayStatCode.class
+com\gkframework\qos\server\core\entity\MinCollect.class
+com\gkframework\qos\server\core\entity\BaseStat.class
+com\gkframework\qos\server\core\entity\NodeInfo.class
+com\gkframework\qos\server\core\entity\DayStatNode.class
+com\gkframework\qos\server\core\entity\MinStat.class
+com\gkframework\qos\server\core\entity\DayStatApp.class
+com\gkframework\qos\server\core\entity\DayStatMethod.class
+com\gkframework\qos\server\core\entity\BaseEntity.class
+com\gkframework\qos\server\core\entity\AppInfo.class

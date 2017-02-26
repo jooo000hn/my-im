@@ -1,0 +1,8 @@
+com\gkframework\orm\mybatis\parser\SqlServer.class
+com\gkframework\orm\mybatis\parser\SqlParser.class
+com\gkframework\orm\mybatis\query\PageQuery.class
+com\gkframework\orm\mybatis\query\Query.class
+com\gkframework\orm\mybatis\query\MapQuery.class
+com\gkframework\orm\mybatis\query\BaseQuery.class
+com\gkframework\orm\mybatis\utils\SystemUtility.class
+com\gkframework\orm\mybatis\page\Query.class

@@ -1,0 +1,11 @@
+com\gkframework\model\Operator.class
+com\gkframework\model\page\Pagination.class
+com\gkframework\model\utils\TypeCaseHelper.class
+com\gkframework\model\utils\JsonUtil.class
+com\gkframework\model\response\ErrorConstants.class
+com\gkframework\model\response\ServiceStatus.class
+com\gkframework\model\response\BaseResponse.class
+com\gkframework\model\page\Paginable.class
+com\gkframework\model\OperatorType.class
+com\gkframework\model\page\SimplePage.class
+com\gkframework\model\response\ServiceResponse.class

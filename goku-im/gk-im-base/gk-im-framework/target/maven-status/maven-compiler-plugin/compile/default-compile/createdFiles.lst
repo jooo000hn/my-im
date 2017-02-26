@@ -1,0 +1,6 @@
+com\goku\im\framework\util\ChineseSpellUtil.class
+com\goku\im\framework\util\StringUtil.class
+com\goku\im\framework\util\GZipUtil.class
+com\goku\im\framework\util\IniParser.class
+com\goku\im\framework\util\EncryUtil.class
+com\goku\im\framework\util\RegexUtil.class

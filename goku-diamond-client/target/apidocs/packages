@@ -1,0 +1,5 @@
+org.n3r.diamond.client
+org.n3r.diamond.client.cache
+org.n3r.diamond.client.impl
+org.n3r.diamond.client.loglevel
+org.n3r.diamond.client.security

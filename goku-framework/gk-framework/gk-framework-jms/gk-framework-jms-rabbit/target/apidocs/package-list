@@ -1,0 +1,5 @@
+com.gkframework.jms.rabbit
+com.gkframework.jms.rabbit.annotation
+com.gkframework.jms.rabbit.api
+com.gkframework.jms.rabbit.config
+com.gkframework.jms.rabbit.test

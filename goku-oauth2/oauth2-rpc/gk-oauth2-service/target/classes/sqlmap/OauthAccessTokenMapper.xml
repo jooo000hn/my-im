@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.goku.oauth.dao.OauthAccessTokenMapper" >
+  <resultMap id="BaseResultMap" type="com.goku.oauth.entity.OauthAccessToken" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="token_id" property="tokenId" jdbcType="VARCHAR" />
+    <result column="authentication_id" property="authenticationId" jdbcType="VARCHAR" />
+    <result column="user_name" property="userName" jdbcType="VARCHAR" />
+    <result column="client_id" property="clientId" jdbcType="VARCHAR" />
+    <result column="refresh_token" property="refreshToken" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.goku.oauth.entity.OauthAccessTokenWithBLOBs" extends="BaseResultMap" >
+    <result column="authentication" property="authentication" jdbcType="LONGVARBINARY" />
+    <result column="token" property="token" jdbcType="LONGVARBINARY" />
+  </resultMap>
+  <sql id="BaseConditionSql" >
+    <trim prefix="where" prefixOverrides="and|or" >
+      <if test="createTime != null" >
+         and create_time = #{createTime}
+      </if>
+      <if test="tokenId != null" >
+         and token_id = #{tokenId}
+      </if>
+      <if test="authenticationId != null" >
+         and authentication_id = #{authenticationId}
+      </if>
+      <if test="userName != null" >
+         and user_name = #{userName}
+      </if>
+      <if test="clientId != null" >
+         and client_id = #{clientId}
+      </if>
+      <if test="refreshToken != null" >
+         and refresh_token = #{refreshToken}
+      </if>
+    </trim>
+  </sql>
+  <sql id="BaseColumnList" >
+    id, create_time, token_id, authentication_id, user_name, client_id, refresh_token
+  </sql>
+  <sql id="BlobColumnList" >
+    token, authentication
+  </sql>
+  <select id="selectByQueryWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="tv.acframework.orm.mybatis.query.Query" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="BaseColumnList" />
+    ,
+    <include refid="BlobColumnList" />
+    from oauth_access_token
+    <if test="_parameter != null" >
+      <include refid="BaseConditionSql" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+    <include refid="common.pageLimit" />
+  </select>
+  <select id="selectByQuery" resultMap="BaseResultMap" parameterType="tv.acframework.orm.mybatis.query.Query" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="BaseColumnList" />
+    from oauth_access_token
+    <if test="_parameter != null" >
+      <include refid="BaseConditionSql" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+    <include refid="common.pageLimit" />
+  </select>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="BaseColumnList" />
+    ,
+    <include refid="BlobColumnList" />
+    from oauth_access_token
+    where id = #{id}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from oauth_access_token
+    where id = #{id}
+  </delete>
+  <delete id="deleteByQuery" parameterType="tv.acframework.orm.mybatis.query.Query" >
+    delete from oauth_access_token
+    <if test="_parameter != null" >
+      <include refid="BaseConditionSql" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.goku.oauth.entity.OauthAccessTokenWithBLOBs" >
+    insert into oauth_access_token (id, create_time, token_id, authentication_id, user_name, client_id, 
+      refresh_token, token, authentication)
+    values (#{id}, #{createTime}, #{tokenId}, #{authenticationId}, #{userName}, #{clientId}, 
+      #{refreshToken}, #{token}, #{authentication})
+  </insert>
+  <insert id="insertSelective" parameterType="com.goku.oauth.entity.OauthAccessTokenWithBLOBs" >
+    insert into oauth_access_token
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="tokenId != null" >
+        token_id,
+      </if>
+      <if test="authenticationId != null" >
+        authentication_id,
+      </if>
+      <if test="userName != null" >
+        user_name,
+      </if>
+      <if test="clientId != null" >
+        client_id,
+      </if>
+      <if test="refreshToken != null" >
+        refresh_token,
+      </if>
+      <if test="token != null" >
+        token,
+      </if>
+      <if test="authentication != null" >
+        authentication,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id},
+      </if>
+      <if test="createTime != null" >
+        #{createTime},
+      </if>
+      <if test="tokenId != null" >
+        #{tokenId},
+      </if>
+      <if test="authenticationId != null" >
+        #{authenticationId},
+      </if>
+      <if test="userName != null" >
+        #{userName},
+      </if>
+      <if test="clientId != null" >
+        #{clientId},
+      </if>
+      <if test="refreshToken != null" >
+        #{refreshToken},
+      </if>
+      <if test="token != null" >
+        #{token},
+      </if>
+      <if test="authentication != null" >
+        #{authentication},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByQuery" parameterType="tv.acframework.orm.mybatis.query.Query" resultType="java.lang.Integer" >
+    select count(*) from oauth_access_token
+    <if test="_parameter != null" >
+      <include refid="BaseConditionSql" />
+    </if>
+  </select>
+  <update id="updateByMapSelective" parameterType="map" >
+    update oauth_access_token
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id},
+      </if>
+      <if test="record.createTime != null" >
+        create_time = #{record.createTime},
+      </if>
+      <if test="record.tokenId != null" >
+        token_id = #{record.tokenId},
+      </if>
+      <if test="record.authenticationId != null" >
+        authentication_id = #{record.authenticationId},
+      </if>
+      <if test="record.userName != null" >
+        user_name = #{record.userName},
+      </if>
+      <if test="record.clientId != null" >
+        client_id = #{record.clientId},
+      </if>
+      <if test="record.refreshToken != null" >
+        refresh_token = #{record.refreshToken},
+      </if>
+      <if test="record.token != null" >
+        token = #{record.token},
+      </if>
+      <if test="record.authentication != null" >
+        authentication = #{record.authentication},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="BaseConditionSql" />
+    </if>
+  </update>
+  <update id="updateByQueryWithBLOBs" parameterType="map" >
+    update oauth_access_token
+    set id = #{record.id},
+      create_time = #{record.createTime},
+      token_id = #{record.tokenId},
+      authentication_id = #{record.authenticationId},
+      user_name = #{record.userName},
+      client_id = #{record.clientId},
+      refresh_token = #{record.refreshToken},
+      token = #{record.token},
+      authentication = #{record.authentication}
+    <if test="_parameter != null" >
+      <include refid="BaseConditionSql" />
+    </if>
+  </update>
+  <update id="updateByMap" parameterType="map" >
+    update oauth_access_token
+    set id = #{record.id},
+      create_time = #{record.createTime},
+      token_id = #{record.tokenId},
+      authentication_id = #{record.authenticationId},
+      user_name = #{record.userName},
+      client_id = #{record.clientId},
+      refresh_token = #{record.refreshToken}
+    <if test="_parameter != null" >
+      <include refid="BaseConditionSql" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.goku.oauth.entity.OauthAccessTokenWithBLOBs" >
+    update oauth_access_token
+    <set >
+      <if test="createTime != null" >
+        create_time = #{createTime},
+      </if>
+      <if test="tokenId != null" >
+        token_id = #{tokenId},
+      </if>
+      <if test="authenticationId != null" >
+        authentication_id = #{authenticationId},
+      </if>
+      <if test="userName != null" >
+        user_name = #{userName},
+      </if>
+      <if test="clientId != null" >
+        client_id = #{clientId},
+      </if>
+      <if test="refreshToken != null" >
+        refresh_token = #{refreshToken},
+      </if>
+      <if test="token != null" >
+        token = #{token},
+      </if>
+      <if test="authentication != null" >
+        authentication = #{authentication},
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.goku.oauth.entity.OauthAccessTokenWithBLOBs" >
+    update oauth_access_token
+    set create_time = #{createTime},
+      token_id = #{tokenId},
+      authentication_id = #{authenticationId},
+      user_name = #{userName},
+      client_id = #{clientId},
+      refresh_token = #{refreshToken},
+      token = #{token},
+      authentication = #{authentication}
+    where id = #{id}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.goku.oauth.entity.OauthAccessToken" >
+    update oauth_access_token
+    set create_time = #{createTime},
+      token_id = #{tokenId},
+      authentication_id = #{authenticationId},
+      user_name = #{userName},
+      client_id = #{clientId},
+      refresh_token = #{refreshToken}
+    where id = #{id}
+  </update>
+</mapper>

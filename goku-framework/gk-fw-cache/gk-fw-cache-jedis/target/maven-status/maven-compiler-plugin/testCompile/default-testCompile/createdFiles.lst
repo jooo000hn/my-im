@@ -1,0 +1,14 @@
+com\goku\aspectj\OneInstant.class
+com\goku\queue\ArrayBlockingQueueTest.class
+com\goku\redis\JedisHolderTest.class
+com\goku\queue\BoundedBuffer.class
+com\goku\redis\JedisTest.class
+com\goku\redis\ShardedJedisTest.class
+com\goku\aspectj\BaseInstant.class
+com\goku\redis\AbstractTests.class
+com\goku\redis\JLockTest$TestThread.class
+com\goku\redis\JedisServiceDemo.class
+com\goku\redis\JedisNested.class
+com\goku\redis\JLockTest.class
+com\goku\redis\ShardedJedisDemo.class
+com\goku\redis\ShardedJedisInterface.class

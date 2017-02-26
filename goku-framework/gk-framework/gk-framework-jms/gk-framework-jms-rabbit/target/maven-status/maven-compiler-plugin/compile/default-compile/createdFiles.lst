@@ -1,0 +1,16 @@
+com\gkframework\jms\rabbit\test\SendAdvice.class
+com\gkframework\jms\rabbit\MessageManager.class
+com\gkframework\jms\rabbit\RecoverConsumerHandler.class
+com\gkframework\jms\rabbit\MessageAnnotationBeanPostProcessor.class
+com\gkframework\jms\rabbit\config\MessageConfig.class
+com\gkframework\jms\rabbit\MessageProcessor.class
+com\gkframework\jms\rabbit\test\MessageAssert.class
+com\gkframework\jms\rabbit\api\MessageService.class
+com\gkframework\jms\rabbit\MessageManager$MessageSender.class
+com\gkframework\jms\rabbit\RecoverConsumerHandler$1.class
+com\gkframework\jms\rabbit\MessageManager$1.class
+com\gkframework\jms\rabbit\RecoverConsumerHandler$2.class
+com\gkframework\jms\rabbit\api\MessageListener.class
+com\gkframework\jms\rabbit\SpringUtil.class
+com\gkframework\jms\rabbit\annotation\Message.class
+com\gkframework\jms\rabbit\MessageManager$2.class

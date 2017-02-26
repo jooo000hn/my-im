@@ -1,0 +1,24 @@
+-classpath
+'D:/opensource/im/goku-im/gk-im-rpc/gk-im-user-rpc/gk-im-user-api/target/classes'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'D:/opensource/im/goku-im/gk-im-rpc/gk-im-user-rpc/gk-im-user-api/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2017. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'D:/opensource/im/goku-im/gk-im-rpc/gk-im-user-rpc/gk-im-user-api/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'gk-im-user-api 1.0.0-SNAPSHOT API'
+-linkoffline
+'http://docs.oracle.com/javase/7/docs/api' 'D:/opensource/im/goku-im/gk-im-rpc/gk-im-user-rpc/gk-im-user-api/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'gk-im-user-api 1.0.0-SNAPSHOT API'

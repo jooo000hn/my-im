@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="30" failures="0" name="org.n3r.diamond.client.SpecParserTest" time="0.003" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_101\jre\bin"/>
+    <property name="java.vm.version" value="25.101-b13"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\opensource\im\goku-diamond-client"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\opensource\im\goku-diamond-client"/>
+    <property name="java.runtime.version" value="1.8.0_101-b13"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_101\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\yangzhen\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="D:\workspace-opensource\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5866979518807154071.tmp"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_101\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_101/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_101/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_101/bin/../jre/lib/amd64;D:\tools\apache-maven-3.3.9\bin;C:\Program Files\Java\jdk1.8.0_101\bin;D:\tools\mysql-5.6.17-winx64\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\TortoiseGit\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit;C:\Program Files\IDM Computer Solutions\UltraCompare;C:\Windows\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Users\yangzhen\AppData\Roaming\npm;D:\tools\eclipse-jee-mars-2-win32-x86_64-2\eclipse;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\yangzhen"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="user.name" value="yangzhen"/>
+    <property name="java.class.path" value="D:\tools\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="org.slf4j.simpleLogger.defaultLogLevel" value="debug"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_101\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -s D:\tools\apache-maven-3.3.9\conf\settings.xml clean install -X"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_101"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_101\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_101\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_101\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\tools\apache-maven-3.3.9"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test101" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test102" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test211" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="testHjy" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test10" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test11" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test12" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test13" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test14" time="0.001"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test15" time="0.001"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test16" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test17" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test18" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test19" time="0.001"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test20" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test21" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test22" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test23" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test24" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test40" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test41" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test1" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test2" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test3" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test4" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test5" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test6" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test7" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test8" time="0"/>
+  <testcase classname="org.n3r.diamond.client.SpecParserTest" name="test9" time="0"/>
+</testsuite>

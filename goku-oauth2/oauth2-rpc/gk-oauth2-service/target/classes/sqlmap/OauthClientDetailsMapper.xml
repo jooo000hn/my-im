@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.goku.oauth.dao.OauthClientDetailsMapper" >
+  <resultMap id="BaseResultMap" type="com.goku.oauth.entity.OauthClientDetails" >
+    <id column="client_id" property="clientId" jdbcType="VARCHAR" />
+    <result column="resource_ids" property="resourceIds" jdbcType="VARCHAR" />
+    <result column="client_secret" property="clientSecret" jdbcType="VARCHAR" />
+    <result column="scope" property="scope" jdbcType="VARCHAR" />
+    <result column="authorized_grant_types" property="authorizedGrantTypes" jdbcType="VARCHAR" />
+    <result column="web_server_redirect_uri" property="webServerRedirectUri" jdbcType="VARCHAR" />
+    <result column="authorities" property="authorities" jdbcType="VARCHAR" />
+    <result column="access_token_validity" property="accessTokenValidity" jdbcType="INTEGER" />
+    <result column="refresh_token_validity" property="refreshTokenValidity" jdbcType="INTEGER" />
+    <result column="additional_information" property="additionalInformation" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="archived" property="archived" jdbcType="BIT" />
+    <result column="trusted" property="trusted" jdbcType="BIT" />
+  </resultMap>
+  <sql id="BaseConditionSql" >
+    <trim prefix="where" prefixOverrides="and|or" >
+      <if test="resourceIds != null" >
+         and resource_ids = #{resourceIds}
+      </if>
+      <if test="clientSecret != null" >
+         and client_secret = #{clientSecret}
+      </if>
+      <if test="scope != null" >
+         and scope = #{scope}
+      </if>
+      <if test="authorizedGrantTypes != null" >
+         and authorized_grant_types = #{authorizedGrantTypes}
+      </if>
+      <if test="webServerRedirectUri != null" >
+         and web_server_redirect_uri = #{webServerRedirectUri}
+      </if>
+      <if test="authorities != null" >
+         and authorities = #{authorities}
+      </if>
+      <if test="accessTokenValidity != null" >
+         and access_token_validity = #{accessTokenValidity}
+      </if>
+      <if test="refreshTokenValidity != null" >
+         and refresh_token_validity = #{refreshTokenValidity}
+      </if>
+      <if test="additionalInformation != null" >
+         and additional_information = #{additionalInformation}
+      </if>
+      <if test="createTime != null" >
+         and create_time = #{createTime}
+      </if>
+      <if test="archived != null" >
+         and archived = #{archived}
+      </if>
+      <if test="trusted != null" >
+         and trusted = #{trusted}
+      </if>
+    </trim>
+  </sql>
+  <sql id="BaseColumnList" >
+    client_id, resource_ids, client_secret, scope, authorized_grant_types, web_server_redirect_uri, 
+    authorities, access_token_validity, refresh_token_validity, additional_information, 
+    create_time, archived, trusted
+  </sql>
+  <select id="selectByQuery" resultMap="BaseResultMap" parameterType="tv.acframework.orm.mybatis.query.Query" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="BaseColumnList" />
+    from oauth_client_details
+    <if test="_parameter != null" >
+      <include refid="BaseConditionSql" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+    <include refid="common.pageLimit" />
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="BaseColumnList" />
+    from oauth_client_details
+    where client_id = #{clientId}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from oauth_client_details
+    where client_id = #{clientId}
+  </delete>
+  <delete id="deleteByQuery" parameterType="tv.acframework.orm.mybatis.query.Query" >
+    delete from oauth_client_details
+    <if test="_parameter != null" >
+      <include refid="BaseConditionSql" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.goku.oauth.entity.OauthClientDetails" >
+    insert into oauth_client_details (client_id, resource_ids, client_secret, scope, authorized_grant_types, 
+      web_server_redirect_uri, authorities, access_token_validity, refresh_token_validity, 
+      additional_information, create_time, archived, trusted)
+    values (#{clientId}, #{resourceIds}, #{clientSecret}, #{scope}, #{authorizedGrantTypes}, 
+      #{webServerRedirectUri}, #{authorities}, #{accessTokenValidity}, #{refreshTokenValidity}, 
+      #{additionalInformation}, #{createTime}, #{archived}, #{trusted})
+  </insert>
+  <insert id="insertSelective" parameterType="com.goku.oauth.entity.OauthClientDetails" >
+    insert into oauth_client_details
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="clientId != null" >
+        client_id,
+      </if>
+      <if test="resourceIds != null" >
+        resource_ids,
+      </if>
+      <if test="clientSecret != null" >
+        client_secret,
+      </if>
+      <if test="scope != null" >
+        scope,
+      </if>
+      <if test="authorizedGrantTypes != null" >
+        authorized_grant_types,
+      </if>
+      <if test="webServerRedirectUri != null" >
+        web_server_redirect_uri,
+      </if>
+      <if test="authorities != null" >
+        authorities,
+      </if>
+      <if test="accessTokenValidity != null" >
+        access_token_validity,
+      </if>
+      <if test="refreshTokenValidity != null" >
+        refresh_token_validity,
+      </if>
+      <if test="additionalInformation != null" >
+        additional_information,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="archived != null" >
+        archived,
+      </if>
+      <if test="trusted != null" >
+        trusted,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="clientId != null" >
+        #{clientId},
+      </if>
+      <if test="resourceIds != null" >
+        #{resourceIds},
+      </if>
+      <if test="clientSecret != null" >
+        #{clientSecret},
+      </if>
+      <if test="scope != null" >
+        #{scope},
+      </if>
+      <if test="authorizedGrantTypes != null" >
+        #{authorizedGrantTypes},
+      </if>
+      <if test="webServerRedirectUri != null" >
+        #{webServerRedirectUri},
+      </if>
+      <if test="authorities != null" >
+        #{authorities},
+      </if>
+      <if test="accessTokenValidity != null" >
+        #{accessTokenValidity},
+      </if>
+      <if test="refreshTokenValidity != null" >
+        #{refreshTokenValidity},
+      </if>
+      <if test="additionalInformation != null" >
+        #{additionalInformation},
+      </if>
+      <if test="createTime != null" >
+        #{createTime},
+      </if>
+      <if test="archived != null" >
+        #{archived},
+      </if>
+      <if test="trusted != null" >
+        #{trusted},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByQuery" parameterType="tv.acframework.orm.mybatis.query.Query" resultType="java.lang.Integer" >
+    select count(*) from oauth_client_details
+    <if test="_parameter != null" >
+      <include refid="BaseConditionSql" />
+    </if>
+  </select>
+  <update id="updateByMapSelective" parameterType="map" >
+    update oauth_client_details
+    <set >
+      <if test="record.clientId != null" >
+        client_id = #{record.clientId},
+      </if>
+      <if test="record.resourceIds != null" >
+        resource_ids = #{record.resourceIds},
+      </if>
+      <if test="record.clientSecret != null" >
+        client_secret = #{record.clientSecret},
+      </if>
+      <if test="record.scope != null" >
+        scope = #{record.scope},
+      </if>
+      <if test="record.authorizedGrantTypes != null" >
+        authorized_grant_types = #{record.authorizedGrantTypes},
+      </if>
+      <if test="record.webServerRedirectUri != null" >
+        web_server_redirect_uri = #{record.webServerRedirectUri},
+      </if>
+      <if test="record.authorities != null" >
+        authorities = #{record.authorities},
+      </if>
+      <if test="record.accessTokenValidity != null" >
+        access_token_validity = #{record.accessTokenValidity},
+      </if>
+      <if test="record.refreshTokenValidity != null" >
+        refresh_token_validity = #{record.refreshTokenValidity},
+      </if>
+      <if test="record.additionalInformation != null" >
+        additional_information = #{record.additionalInformation},
+      </if>
+      <if test="record.createTime != null" >
+        create_time = #{record.createTime},
+      </if>
+      <if test="record.archived != null" >
+        archived = #{record.archived},
+      </if>
+      <if test="record.trusted != null" >
+        trusted = #{record.trusted},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="BaseConditionSql" />
+    </if>
+  </update>
+  <update id="updateByMap" parameterType="map" >
+    update oauth_client_details
+    set client_id = #{record.clientId},
+      resource_ids = #{record.resourceIds},
+      client_secret = #{record.clientSecret},
+      scope = #{record.scope},
+      authorized_grant_types = #{record.authorizedGrantTypes},
+      web_server_redirect_uri = #{record.webServerRedirectUri},
+      authorities = #{record.authorities},
+      access_token_validity = #{record.accessTokenValidity},
+      refresh_token_validity = #{record.refreshTokenValidity},
+      additional_information = #{record.additionalInformation},
+      create_time = #{record.createTime},
+      archived = #{record.archived},
+      trusted = #{record.trusted}
+    <if test="_parameter != null" >
+      <include refid="BaseConditionSql" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.goku.oauth.entity.OauthClientDetails" >
+    update oauth_client_details
+    <set >
+      <if test="resourceIds != null" >
+        resource_ids = #{resourceIds},
+      </if>
+      <if test="clientSecret != null" >
+        client_secret = #{clientSecret},
+      </if>
+      <if test="scope != null" >
+        scope = #{scope},
+      </if>
+      <if test="authorizedGrantTypes != null" >
+        authorized_grant_types = #{authorizedGrantTypes},
+      </if>
+      <if test="webServerRedirectUri != null" >
+        web_server_redirect_uri = #{webServerRedirectUri},
+      </if>
+      <if test="authorities != null" >
+        authorities = #{authorities},
+      </if>
+      <if test="accessTokenValidity != null" >
+        access_token_validity = #{accessTokenValidity},
+      </if>
+      <if test="refreshTokenValidity != null" >
+        refresh_token_validity = #{refreshTokenValidity},
+      </if>
+      <if test="additionalInformation != null" >
+        additional_information = #{additionalInformation},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime},
+      </if>
+      <if test="archived != null" >
+        archived = #{archived},
+      </if>
+      <if test="trusted != null" >
+        trusted = #{trusted},
+      </if>
+    </set>
+    where client_id = #{clientId}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.goku.oauth.entity.OauthClientDetails" >
+    update oauth_client_details
+    set resource_ids = #{resourceIds},
+      client_secret = #{clientSecret},
+      scope = #{scope},
+      authorized_grant_types = #{authorizedGrantTypes},
+      web_server_redirect_uri = #{webServerRedirectUri},
+      authorities = #{authorities},
+      access_token_validity = #{accessTokenValidity},
+      refresh_token_validity = #{refreshTokenValidity},
+      additional_information = #{additionalInformation},
+      create_time = #{createTime},
+      archived = #{archived},
+      trusted = #{trusted}
+    where client_id = #{clientId}
+  </update>
+</mapper>

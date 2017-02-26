@@ -1,0 +1,7 @@
+com\goku\user\GkUserConst.class
+com\goku\user\model\OauthUser.class
+com\goku\user\service\GkUserCasAdapter.class
+com\goku\user\service\GkUserService.class
+com\goku\user\service\LoginService.class
+com\goku\user\service\GkUserCenterService.class
+com\goku\user\model\GkUser.class

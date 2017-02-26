@@ -1,0 +1,5 @@
+com\gkframework\boot\SpringContainer.class
+com\gkframework\boot\jmx\SpringContainerManagerMBean.class
+com\gkframework\boot\jmx\SpringContainerManager.class
+com\gkframework\boot\Main.class
+com\gkframework\boot\Main$1.class

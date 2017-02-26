@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>gk-im-user-rpc</artifactId>
+        <groupId>com.goku.im</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.goku.im</groupId>
+    <artifactId>gk-im-user-service</artifactId>
+
+    <dependencies>
+        <!-- junit test 必须引入 -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <!--<scope>test</scope>-->
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+        </dependency>
+        <!-- config 必须引入 -->
+        <dependency>
+            <groupId>com.gkframework.config</groupId>
+            <artifactId>gk-fw-config-diamond</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <!-- dubbo 启动 必须引入 -->
+        <dependency>
+            <groupId>com.gkframework.boot</groupId>
+            <artifactId>gk-fw-boot-spring</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <!-- collector qos 必须引入 -->
+        <dependency>
+            <groupId>com.gkframework.qos</groupId>
+            <artifactId>gk-fw-qos-collector-dubbo</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <!-- spring orm -->
+        <dependency>
+            <groupId>com.gkframework</groupId>
+            <artifactId>gk-framework-orm-mybatis</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <!-- dubbo 服务注册方式 start 必须引入-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.netty</groupId>
+            <artifactId>netty</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.javassist</groupId>
+            <artifactId>javassist</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.sgroschupf</groupId>
+            <artifactId>zkclient</artifactId>
+        </dependency>
+        <!-- dubbo 服务注册方式 end -->
+
+        <!-- 切面 必须 -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+        </dependency>
+        <!-- 切面 必须 -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.gkframework</groupId>
+            <artifactId>gk-fw-cache-jedis</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.goku.user</groupId>
+            <artifactId>goku-user-api</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.goku.im</groupId>
+            <artifactId>gk-im-user-api</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.goku.im</groupId>
+            <artifactId>gk-im-pushservice-api</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>src/main/assembly/conf</directory>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptor>src/main/assembly/assembly.xml</descriptor>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,3 @@
+com\goku\admin\model\AdminUser.class
+com\goku\admin\service\AdminUserService.class
+com\goku\admin\AdminUserConst.class

@@ -1,0 +1,11 @@
+D:\opensource\im\goku-framework\gk-framework\gk-framework-jms\gk-framework-jms-rabbit\src\main\java\com\gkframework\jms\rabbit\RecoverConsumerHandler.java
+D:\opensource\im\goku-framework\gk-framework\gk-framework-jms\gk-framework-jms-rabbit\src\main\java\com\gkframework\jms\rabbit\api\MessageService.java
+D:\opensource\im\goku-framework\gk-framework\gk-framework-jms\gk-framework-jms-rabbit\src\main\java\com\gkframework\jms\rabbit\MessageManager.java
+D:\opensource\im\goku-framework\gk-framework\gk-framework-jms\gk-framework-jms-rabbit\src\main\java\com\gkframework\jms\rabbit\SpringUtil.java
+D:\opensource\im\goku-framework\gk-framework\gk-framework-jms\gk-framework-jms-rabbit\src\main\java\com\gkframework\jms\rabbit\MessageProcessor.java
+D:\opensource\im\goku-framework\gk-framework\gk-framework-jms\gk-framework-jms-rabbit\src\main\java\com\gkframework\jms\rabbit\api\MessageListener.java
+D:\opensource\im\goku-framework\gk-framework\gk-framework-jms\gk-framework-jms-rabbit\src\main\java\com\gkframework\jms\rabbit\config\MessageConfig.java
+D:\opensource\im\goku-framework\gk-framework\gk-framework-jms\gk-framework-jms-rabbit\src\main\java\com\gkframework\jms\rabbit\MessageAnnotationBeanPostProcessor.java
+D:\opensource\im\goku-framework\gk-framework\gk-framework-jms\gk-framework-jms-rabbit\src\main\java\com\gkframework\jms\rabbit\test\MessageAssert.java
+D:\opensource\im\goku-framework\gk-framework\gk-framework-jms\gk-framework-jms-rabbit\src\main\java\com\gkframework\jms\rabbit\annotation\Message.java
+D:\opensource\im\goku-framework\gk-framework\gk-framework-jms\gk-framework-jms-rabbit\src\main\java\com\gkframework\jms\rabbit\test\SendAdvice.java

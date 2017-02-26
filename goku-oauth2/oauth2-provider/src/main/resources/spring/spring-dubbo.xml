@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="   
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+
+    <bean id="propertyConfigurer"
+          class="com.gkframework.config.diamond.spring.ExtendedPropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath*:system.properties</value>
+            </list>
+        </property>
+        <property name="loadDiamond" value="true" />
+    </bean>
+
+    <dubbo:annotation package="tv.acframework.qos.collector.dubbo"/>
+	<!-- dubbo连接配置 -->
+    <dubbo:application name="${application.name}" />
+    <!--<dubbo:registry address="multicast://224.5.6.7:1234" protocol="dubbo"/>-->
+    <dubbo:registry address="${registry.address}" protocol="zookeeper"/>
+
+    <dubbo:consumer check="false" timeout="30000" retries="1" />
+    <!-- 消费配置 -->
+    <!-- 此处说明需要调用的接口 -->
+    <!--<import resource="classpath*:ac-user-dubbo-consumer.xml"/>-->
+    <dubbo:reference id="acUserService" interface="com.goku.user.service.GkUserService" version="1.0.1"/>
+    <dubbo:reference id="acAccessTokenService" interface="com.goku.oauth.service.GkAccessTokenService"  version="1.0.0"/>
+    <dubbo:reference id="acClientDetailsService" interface="com.goku.oauth.service.GkClientDetailsService"  version="1.0.0"/>
+    <dubbo:reference id="acOauthCodeService" interface="com.goku.oauth.service.GkOauthCodeService"  version="1.0.0"/>
+    <dubbo:reference id="acRefreshTokenService" interface="com.goku.oauth.service.GkRefreshTokenService"  version="1.0.0"/>
+</beans>

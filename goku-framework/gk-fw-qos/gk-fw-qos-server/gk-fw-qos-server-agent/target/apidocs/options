@@ -1,0 +1,25 @@
+-classpath
+'D:/opensource/im/goku-framework/gk-fw-qos/gk-fw-qos-server/gk-fw-qos-server-agent/target/classes;D:/maven_ku/org/springframework/spring-beans/4.0.5.RELEASE/spring-beans-4.0.5.RELEASE.jar;D:/maven_ku/com/gkframework/config/gk-fw-config-core/1.0.0-SNAPSHOT/gk-fw-config-core-1.0.0-SNAPSHOT.jar;D:/maven_ku/org/apache/kafka/kafka_2.11/0.8.2.2/kafka_2.11-0.8.2.2.jar;D:/maven_ku/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.jar;D:/maven_ku/net/jpountz/lz4/lz4/1.2.0/lz4-1.2.0.jar;D:/maven_ku/org/jgroups/jgroups/3.4.5.Final/jgroups-3.4.5.Final.jar;D:/maven_ku/commons-io/commons-io/1.4/commons-io-1.4.jar;D:/maven_ku/org/codehaus/jackson/jackson-core-lgpl/1.4.0/jackson-core-lgpl-1.4.0.jar;D:/maven_ku/aopalliance/aopalliance/1.0/aopalliance-1.0.jar;D:/maven_ku/com/gkframework/boot/gk-fw-boot-spring/1.0.0-SNAPSHOT/gk-fw-boot-spring-1.0.0-SNAPSHOT.jar;D:/maven_ku/org/xerial/snappy/snappy-java/1.1.2-RC3/snappy-java-1.1.2-RC3.jar;D:/maven_ku/org/projectlombok/lombok/1.14.2/lombok-1.14.2.jar;D:/maven_ku/com/yammer/metrics/metrics-core/2.2.0/metrics-core-2.2.0.jar;D:/maven_ku/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar;D:/maven_ku/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar;D:/maven_ku/org/apache/httpcomponents/httpclient/4.3.5/httpclient-4.3.5.jar;D:/maven_ku/jline/jline/0.9.94/jline-0.9.94.jar;D:/maven_ku/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar;D:/maven_ku/com/gkframework/qos/gk-fw-qos-collector-core/1.0.0-SNAPSHOT/gk-fw-qos-collector-core-1.0.0-SNAPSHOT.jar;D:/maven_ku/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar;D:/maven_ku/org/springframework/spring-expression/4.0.5.RELEASE/spring-expression-4.0.5.RELEASE.jar;D:/maven_ku/com/taobao/diamond/diamond-client/2.0.5.4.bbg-SNAPSHOT/diamond-client-2.0.5.4.bbg-SNAPSHOT.jar;D:/maven_ku/net/sf/jopt-simple/jopt-simple/3.2/jopt-simple-3.2.jar;D:/maven_ku/org/scala-lang/scala-library/2.11.5/scala-library-2.11.5.jar;D:/maven_ku/commons-codec/commons-codec/1.6/commons-codec-1.6.jar;D:/maven_ku/com/101tec/zkclient/0.3/zkclient-0.3.jar;D:/maven_ku/org/codehaus/jackson/jackson-mapper-lgpl/1.4.0/jackson-mapper-lgpl-1.4.0.jar;D:/maven_ku/com/gkframework/boot/gk-fw-boot-core/1.0.0-SNAPSHOT/gk-fw-boot-core-1.0.0-SNAPSHOT.jar;D:/maven_ku/org/springframework/spring-aop/4.0.5.RELEASE/spring-aop-4.0.5.RELEASE.jar;D:/maven_ku/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar;D:/maven_ku/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.2/scala-parser-combinators_2.11-1.0.2.jar;D:/maven_ku/org/springframework/spring-context/4.0.5.RELEASE/spring-context-4.0.5.RELEASE.jar;D:/maven_ku/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar;D:/maven_ku/log4j/log4j/1.2.16/log4j-1.2.16.jar;D:/maven_ku/com/gkframework/config/gk-fw-config-diamond/1.0.0-SNAPSHOT/gk-fw-config-diamond-1.0.0-SNAPSHOT.jar;D:/maven_ku/com/taobao/diamond/diamond-utils/2.0.5.4.bbg-SNAPSHOT/diamond-utils-2.0.5.4.bbg-SNAPSHOT.jar;D:/maven_ku/org/springframework/spring-core/4.0.5.RELEASE/spring-core-4.0.5.RELEASE.jar;D:/maven_ku/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar;D:/maven_ku/commons-lang/commons-lang/2.6/commons-lang-2.6.jar;D:/maven_ku/org/apache/kafka/kafka-clients/0.8.2.2/kafka-clients-0.8.2.2.jar;D:/maven_ku/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar'
+-encoding
+'UTF-8'
+-protected
+-quiet
+-sourcepath
+'D:/opensource/im/goku-framework/gk-fw-qos/gk-fw-qos-server/gk-fw-qos-server-agent/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2017. All Rights Reserved.'
+-charset
+'UTF-8'
+-d
+'D:/opensource/im/goku-framework/gk-fw-qos/gk-fw-qos-server/gk-fw-qos-server-agent/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'gk-fw-qos-server-agent 1.0.0-SNAPSHOT API'
+-linkoffline
+'http://download.oracle.com/javase/6/docs/api' 'D:/opensource/im/goku-framework/gk-fw-qos/gk-fw-qos-server/gk-fw-qos-server-agent/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'gk-fw-qos-server-agent 1.0.0-SNAPSHOT API'

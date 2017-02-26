@@ -1,0 +1,9 @@
+com\goku\im\relation\UserRelationRedisKeyConst.class
+com\goku\im\relation\service\GkImGroupUserService.class
+com\goku\im\relation\model\GkImUserFriend.class
+com\goku\im\relation\service\GkImUserFriendService.class
+com\goku\im\relation\model\GkImGroup.class
+com\goku\im\relation\service\UserRelationAdapter.class
+com\goku\im\relation\UserRelationCodeConst.class
+com\goku\im\relation\service\GkImGroupService.class
+com\goku\im\relation\model\GkImGroupUser.class

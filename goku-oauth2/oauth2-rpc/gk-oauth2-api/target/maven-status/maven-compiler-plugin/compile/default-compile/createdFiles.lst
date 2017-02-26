@@ -1,0 +1,8 @@
+com\goku\oauth\service\GkClientDetailsService.class
+com\goku\oauth\service\GkOauthCodeService.class
+com\goku\oauth\model\GkClientDetails.class
+com\goku\oauth\model\GkRefreshToken.class
+com\goku\oauth\model\GkOauthCode.class
+com\goku\oauth\model\GkAccessToken.class
+com\goku\oauth\service\GkAccessTokenService.class
+com\goku\oauth\service\GkRefreshTokenService.class

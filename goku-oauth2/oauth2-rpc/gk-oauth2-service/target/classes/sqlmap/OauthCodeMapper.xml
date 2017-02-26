@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.goku.oauth.dao.OauthCodeMapper" >
+  <resultMap id="BaseResultMap" type="com.goku.oauth.entity.OauthCode" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.goku.oauth.entity.OauthCode" extends="BaseResultMap" >
+    <result column="authentication" property="authentication" jdbcType="LONGVARBINARY" />
+  </resultMap>
+  <sql id="BaseConditionSql" >
+    <trim prefix="where" prefixOverrides="and|or" >
+      <if test="createTime != null" >
+         and create_time = #{createTime}
+      </if>
+      <if test="code != null" >
+         and code = #{code}
+      </if>
+      <if test="authentication != null" >
+         and authentication = #{authentication}
+      </if>
+    </trim>
+  </sql>
+  <sql id="BaseColumnList" >
+    id, create_time, code
+  </sql>
+  <sql id="BlobColumnList" >
+    authentication
+  </sql>
+  <select id="selectByQueryWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="tv.acframework.orm.mybatis.query.Query" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="BaseColumnList" />
+    ,
+    <include refid="BlobColumnList" />
+    from oauth_code
+    <if test="_parameter != null" >
+      <include refid="BaseConditionSql" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+    <include refid="common.pageLimit" />
+  </select>
+  <select id="selectByQuery" resultMap="BaseResultMap" parameterType="tv.acframework.orm.mybatis.query.Query" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="BaseColumnList" />
+    from oauth_code
+    <if test="_parameter != null" >
+      <include refid="BaseConditionSql" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+    <include refid="common.pageLimit" />
+  </select>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="BaseColumnList" />
+    ,
+    <include refid="BlobColumnList" />
+    from oauth_code
+    where id = #{id}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from oauth_code
+    where id = #{id}
+  </delete>
+  <delete id="deleteByQuery" parameterType="tv.acframework.orm.mybatis.query.Query" >
+    delete from oauth_code
+    <if test="_parameter != null" >
+      <include refid="BaseConditionSql" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.goku.oauth.entity.OauthCode" >
+    insert into oauth_code (id, create_time, code, authentication)
+    values (#{id}, #{createTime}, #{code}, #{authentication})
+  </insert>
+  <insert id="insertSelective" parameterType="com.goku.oauth.entity.OauthCode" >
+    insert into oauth_code
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="code != null" >
+        code,
+      </if>
+      <if test="authentication != null" >
+        authentication,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id},
+      </if>
+      <if test="createTime != null" >
+        #{createTime},
+      </if>
+      <if test="code != null" >
+        #{code},
+      </if>
+      <if test="authentication != null" >
+        #{authentication},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByQuery" parameterType="tv.acframework.orm.mybatis.query.Query" resultType="java.lang.Integer" >
+    select count(*) from oauth_code
+    <if test="_parameter != null" >
+      <include refid="BaseConditionSql" />
+    </if>
+  </select>
+  <update id="updateByMapSelective" parameterType="map" >
+    update oauth_code
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id},
+      </if>
+      <if test="record.createTime != null" >
+        create_time = #{record.createTime},
+      </if>
+      <if test="record.code != null" >
+        code = #{record.code},
+      </if>
+      <if test="record.authentication != null" >
+        authentication = #{record.authentication},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="BaseConditionSql" />
+    </if>
+  </update>
+  <update id="updateByQueryWithBLOBs" parameterType="map" >
+    update oauth_code
+    set id = #{record.id},
+      create_time = #{record.createTime},
+      code = #{record.code},
+      authentication = #{record.authentication}
+    <if test="_parameter != null" >
+      <include refid="BaseConditionSql" />
+    </if>
+  </update>
+  <update id="updateByMap" parameterType="map" >
+    update oauth_code
+    set id = #{record.id},
+      create_time = #{record.createTime},
+      code = #{record.code}
+    <if test="_parameter != null" >
+      <include refid="BaseConditionSql" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.goku.oauth.entity.OauthCode" >
+    update oauth_code
+    <set >
+      <if test="createTime != null" >
+        create_time = #{createTime},
+      </if>
+      <if test="code != null" >
+        code = #{code},
+      </if>
+      <if test="authentication != null" >
+        authentication = #{authentication},
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.goku.oauth.entity.OauthCode" >
+    update oauth_code
+    set create_time = #{createTime},
+      code = #{code},
+      authentication = #{authentication}
+    where id = #{id}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.goku.oauth.entity.OauthCode" >
+    update oauth_code
+    set create_time = #{createTime},
+      code = #{code}
+    where id = #{id}
+  </update>
+</mapper>

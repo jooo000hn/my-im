@@ -1,0 +1,24 @@
+-classpath
+'D:/opensource/im/goku-framework/gk-framework/gk-framework-jms/gk-framework-jms-rabbit/target/classes;D:/maven_ku/org/springframework/spring-beans/4.0.5.RELEASE/spring-beans-4.0.5.RELEASE.jar;D:/maven_ku/cglib/cglib/3.1/cglib-3.1.jar;D:/maven_ku/org/springframework/spring-expression/4.0.5.RELEASE/spring-expression-4.0.5.RELEASE.jar;D:/maven_ku/org/ow2/asm/asm/4.2/asm-4.2.jar;D:/maven_ku/org/springframework/spring-aop/4.0.5.RELEASE/spring-aop-4.0.5.RELEASE.jar;D:/maven_ku/aopalliance/aopalliance/1.0/aopalliance-1.0.jar;D:/maven_ku/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar;D:/maven_ku/org/springframework/spring-context/4.0.5.RELEASE/spring-context-4.0.5.RELEASE.jar;D:/maven_ku/org/json/json/20140107/json-20140107.jar;D:/maven_ku/org/skyscreamer/jsonassert/1.2.3/jsonassert-1.2.3.jar;D:/maven_ku/com/rabbitmq/amqp-client/3.3.4/amqp-client-3.3.4.jar;D:/maven_ku/org/springframework/spring-core/4.0.5.RELEASE/spring-core-4.0.5.RELEASE.jar;D:/maven_ku/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'D:/opensource/im/goku-framework/gk-framework/gk-framework-jms/gk-framework-jms-rabbit/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2017. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'D:/opensource/im/goku-framework/gk-framework/gk-framework-jms/gk-framework-jms-rabbit/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Rabbitmq 1.0.0-SNAPSHOT API'
+-linkoffline
+'http://docs.oracle.com/javase/7/docs/api' 'D:/opensource/im/goku-framework/gk-framework/gk-framework-jms/gk-framework-jms-rabbit/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'Rabbitmq 1.0.0-SNAPSHOT API'

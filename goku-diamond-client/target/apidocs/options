@@ -1,0 +1,26 @@
+-classpath
+'D:/opensource/im/goku-diamond-client/target/classes;D:/maven_ku/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar;D:/maven_ku/com/alibaba/fastjson/1.1.36/fastjson-1.1.36.jar;D:/maven_ku/log4j/log4j/1.2.17/log4j-1.2.17.jar;D:/maven_ku/org/jooq/joor/0.9.3/joor-0.9.3.jar;D:/maven_ku/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar;D:/maven_ku/commons-io/commons-io/2.4/commons-io-2.4.jar;D:/maven_ku/commons-codec/commons-codec/1.8/commons-codec-1.8.jar;D:/maven_ku/ch/qos/logback/logback-core/1.1.2/logback-core-1.1.2.jar;D:/maven_ku/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar;D:/maven_ku/ch/qos/logback/logback-classic/1.1.2/logback-classic-1.1.2.jar;D:/maven_ku/com/google/guava/guava/15.0/guava-15.0.jar;D:/maven_ku/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar'
+-encoding
+'UTF-8'
+-public
+-sourcepath
+'D:/opensource/im/goku-diamond-client/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2017. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'D:/opensource/im/goku-diamond-client/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'diamond client 0.0.21-SNAPSHOT API'
+-link
+'http://docs.oracle.com/javase/6/docs/api'
+-linkoffline
+'http://docs.oracle.com/javase/6/docs/api' 'D:/opensource/im/goku-diamond-client/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'diamond client 0.0.21-SNAPSHOT API'
